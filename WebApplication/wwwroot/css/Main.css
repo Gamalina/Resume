@@ -6,7 +6,7 @@
     color: #333;
 }
 
-.container {
+.containerCV {
     width: 80%;
     margin: auto;
     background-color: #fff;
@@ -63,7 +63,7 @@
     gap: 20px;
 }
 
-section {
+.sectionCV {
     margin-bottom: 20px;
 }
 
@@ -75,12 +75,12 @@ h2 {
     color: #0066cc;
 }
 
-ul {
+.ulCV {
     list-style-type: none;
     padding-left: 0;
 }
 
-    ul li::before {
+    .ulCV li::before {
         content: "• ";
         color: #0066cc;
         font-weight: bold;
