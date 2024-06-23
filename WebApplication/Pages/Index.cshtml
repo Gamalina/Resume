@@ -1,0 +1,121 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daniel Rud Callesen - Resume</title>
+    <link rel="stylesheet" href="/css/Main.css">
+</head>
+<body>
+    <div class="container">
+                <header class="ResumeHeader">
+            <div class="header-right">
+                <img src="/images/Me.jpg" alt="Portrait" />
+            </div>
+            <div class="header-left">
+                <h1>Daniel Rud Callesen</h1>
+                <p>Graduated Computer Science</p>
+                <div class="contact-info">
+                    <a href="mailto:Danielrudcallesen96@gmail.com">Danielrudcallesen96@gmail.com</a> |
+                    <a href="https://www.linkedin.com/in/danielcallesen/" target="_blank">LinkedIn</a> |
+                    <a href="https://github.com/Gamalina" target="_blank">GitHub</a> |
+                    <span>+45 24761197</span>
+                </div>
+            </div>
+            </header>
+
+        <div class="main-content">
+            <div class="left-column">
+                <section id="experience">
+                    <h2>Practical Experience</h2>
+                    <div class="job">
+                        <h3>Project at JN Data</h3>
+                        <p>Duration: 4 months</p>
+                        <ul>
+                            <li>MVC web-application written in C# in .Net Framework</li>
+                            <li>Integrated Azure Database & Azure Active Directory</li>
+                            <li>Gathered data through REST API</li>
+                            <li>Designed the architecture using UML</li>
+                            <li>Tested with Unit Testing</li>
+                            <li>Documented the development</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section id="education">
+                    <h2>Education History</h2>
+                    <div class="education">
+                        <h3>Computer Science AP-Degree</h3>
+                        <p>September 2021 to February 2024 (2 years, 6 months)</p>
+                        <ul>
+                            <li>Solid foundation in computer science and information technology, including algorithms, data structure.</li>
+                            <li>Developing and maintaining applications</li>
+                            <li>Electives: Advanced Software Construction, IT-Security & Game Development</li>
+                        </ul>
+                    </div>
+                    <div class="education">
+                        <h3>Web-Integrator AP-Degree</h3>
+                        <p>September 2017 to November 2019 (2 years, 3 months)</p>
+                        <ul>
+                            <li>Understanding the concept of web-design</li>
+                            <li>Usage of frameworks to make designing easier</li>
+                            <li>Completed course in Umbraco</li>
+                        </ul>
+                    </div>
+                </section>
+            </div>
+
+            <div class="right-column">
+                <section id="certifications">
+                    <h2>Certifications</h2>
+                    <h3>Microsoft Azure Cloud AZ-900 & AZ-204 (Ongoing)</h3>
+                    <p> Duration: 13 May 2024 - 24 June 2024</p>
+                    <ul>
+                        <li>
+                            AZ-900: Microsoft Azure Fundamentals
+                        </li>
+                                Provides foundational knowledge of cloud services and how those services are provided with Microsoft Azure.
+                            
+                        <li>
+                            AZ-204: Develop Solutions for Microsoft Azure
+                        </li>
+                            Focuses on designing, building, testing, and maintaining cloud applications and services within Microsoft Azure.
+                            
+                        </li>
+                    </ul>
+                </section>
+                @* <section id="objective">
+                    <h2>Objective</h2>
+                    <p>To obtain a position in the field of computer science that will allow me to utilize my knowledge of software design and development.</p>
+                </section> *@
+
+                <section id="skills">
+                    <h2>Relevant Skills</h2>
+                    <ul>
+                        <li>Proficient in C#, React, Node.js, API & Azure Cloud.</li>
+                        <li>Coded several scripts with Python</li>
+                        <li>Developed several projects with the use of Agile and Scrum methodologies.</li>
+                        <li>Usage of softwares like Git, Github, Docker, Jira, Slack, Azure & many more.</li>
+                        <li>IDE: Visual Studio 2022</li>
+                    </ul>
+                </section>
+
+                <section id="languages">
+                    <h2>Languages</h2>
+                    <ul>
+                        <li>Danish - Native</li>
+                        <li>English - Proficient</li>
+                    </ul>
+                </section>
+            </div>
+        </div>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>
+
