@@ -1,0 +1,128 @@
+﻿@page
+@model WebApplication.Pages.CloudChallengeModel
+@{
+}
+<div class="containerCV">
+    <header class="ResumeHeader">
+        <div>
+            <h1>The Cloud Resume Challenge</h1>
+            <br />
+            <h3><a style="color: dodgerblue;" href="https://cloudresumechallenge.dev/docs/the-challenge/azure/">Cloud Challenge</a></h3>
+            
+        </div>
+    </header>
+
+    <div class="main-content">
+        <div class="left-column">
+            <section class="sectionCV">
+                <h2>1. Certification</h2>
+                <p>
+                    The Cloud Fundamentals Course; AZ-900 Certification is currently not obtained. The course is still ongoing and I expect soon to be able to take the exam along side Azure Cloud Developer Associate AZ-204 Certification 
+                </p>
+            </section>
+            <section class="sectionCV">
+                <h2>2. HTML</h2>
+                <p>
+                    Created HTML File to write my resume in HTML using appropriated tags to structure the content, such as "Header", "Section", "H1 & P", "ul/li".
+                </p>
+            </section>
+            <section class="sectionCV">
+                <h2>3. CSS</h2>
+                <p>
+                    Used the shared CSS file to style the website and created a CSS file to style my HTML resume.
+                </p>
+            </section>
+            <section class="sectionCV">
+                <h2>4. Static Website</h2>
+                <p>
+                      I deployed my HTML resume as an Azure Storage Static Website.  
+                </p>
+            </section>
+            <section class="sectionCV">
+                <h2>5. HTTPS</h2>
+                <p>
+                        After creating the Static Website I used CDN to create a secure version of HTTP.
+                </p>
+            </section>
+            <section class="sectionCV">
+                <h2>6. DNS</h2>
+                <p>
+                    Used Azure DNS provider to create a custom domain name to point to the Azure CDN Endpoint.    
+                </p>
+            </section>
+            <section class="sectionCV">
+                <h2>7. Javascript</h2>
+                <p>
+                    - Did Funtion App First <br />
+                    After the creation of the function app and I had tested it using Postman and the test lab on Azure.Portal. I had to create a javascript that calls to my Function App each time someone visists my website. 
+                    This part did not take too much of my time. After having sit with Javascript while trying to get Function App to work, I created a script and it worked right away. 
+                </p>
+            </section>
+            <section class="sectionCV">
+                <h2>8. Database</h2>
+                <p>
+                    I went onto Azure Portal to create a resource group, inside the resource group I added a serverless Azure Cosmos DB NoSQL resource and filled out the required details.
+                    Then I created a table with tableID as viewContainer and Database as viewDB.
+                </p>
+            </section>
+        </div>
+        <div class="right-column">
+            <section class="sectionCV">
+                <h2>9. API</h2>
+                <p>
+                    - Did Function App First. <br />
+                    Inside my resource group I created an API Management Service with the required details. Went onto create an API inside the management services. Set the API Name and the Web Service URL to use the base URl of my Function App (Https://functionappname.azurewebsites.net).
+                    I created an operation called GetViewCount with URL template /api/functionname. And set it to Get. I set the backend URL to my Function App Base URL.
+                    Went into the test lab to test the operation.
+                </p>
+            </section>
+            <section class="sectionCV">
+                <h2>10. Python - Function App in Node.js instead</h2>
+                <p>
+                    I inittally wanted to use Python to write my script for Function App. However, I was stuck on this part for 7+ hours due to a bug. You can read more about the bug here: <a herf="https://github.com/Azure/Azure-Functions/issues/2408">The Bug</a>.
+                    I had been working on this for so long so I tried everything, and I could not get any other response than 404 and 500 Internal Server Error. So I recreated the Function App multiple times in different ways, until I noticed when I ran my test code the properties was not aligned with the bindings.properties, and after digging to find the solution. I finally found it, and I ended up with a Javascript rather than Python script, due to recreating the function so many times.
+                    I ended up with using a HTTPTrigger and installed Cosmos DB SDK using App Service Editor. I set up environment variables to align my Cosmos DB Endpoint and DB_Key. 
+                    I enabled CORS to allow the origin of the call.
+                </p>
+            </section>
+            <section class="sectionCV">
+                <h2>11. Tests</h2>
+                <p>
+                    Ongoing
+                </p>
+            </section>
+            <section class="sectionCV">
+                <h2>12. Infrastructe as Code</h2>
+                <p>
+                    Ongoing
+                </p>
+            </section>
+            <section class="sectionCV">
+                <h2>13. Source Control</h2>
+                <p>
+                    Ongoing
+                </p>
+            </section>
+            <section class="sectionCV">
+                <h2>14. CI/CD (Backend)</h2>
+                <p>
+                    Ongoing
+                </p>
+            </section>
+            <section class="sectionCV">
+                <h2>15. CI/CD (Frontend)</h2>
+                <p>
+                    Ongoing
+                </p>
+            </section>
+            <section class="sectionCV">
+                <h2>16. Blog Post</h2>
+                <p>
+                    Rather than create a blog post. I decided to use the website to describe how I tackle the challenge.
+                </p>
+            </section>
+        </div>
+
+    </div>
+</div>
+

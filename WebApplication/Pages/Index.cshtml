@@ -9,26 +9,62 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Daniel Rud Callesen - Resume</title>
-    <link rel="stylesheet" href="/css/Main.css">
 </head>
 <body>
-    <h1>Welcome to my Cloud Resume Challenge</h1>
-    <p>This page has been viewed <span id="viewCount">0</span> times.</p>
+
+    <section class="hidden">
+        <div id="visit-count" style="text-align: center;">
+
+        </div>
+    </section>
+    <section class="hidden">
+        <div class="ResumeHeader">
+            <div class="header-right">
+                <img src="/images/Me.jpg" alt="Portrait" />
+            </div>
+            <div class="header-left">
+                <h1>Daniel Rud Callesen</h1>
+                <p>Graduated Computer Science</p>
+                <div class="contact-info">
+                    <a href="mailto:Danielrudcallesen96@gmail.com">Danielrudcallesen96@gmail.com</a> |
+                    <a href="https://www.linkedin.com/in/danielcallesen/" target="_blank">LinkedIn</a> |
+                    <a href="https://github.com/Gamalina" target="_blank">GitHub</a> |
+                    <span>+45 24761197</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="hidden">
+        <h2>Graduated Computer Science</h2>
+    </section>
+    <section class="hidden">
+        <h1>Practical Experience</h1>
+    </section>
+
+    
 
     <script>
-        async function fetchViewCount() {
-            try {
-                const response = await fetch('https://<your-api-management-service>.azure-api.net/viewCount');
-                const data = await response.json();
-                document.getElementById('viewCount').innerText = data.count;
-            } catch (error) {
-                console.error('Error fetching view count:', error);
-            }
+        async function incrementVisitCount() {
+            const response = await fetch('https://viewcountfunction.azurewebsites.net/api/HttpTrigger1?');
+            const data = await response.text();
+            console.log(data);
+            // Optionally, you can display the visit count on your website
+            document.getElementById('visit-count').innerText = data;
         }
 
-        fetchViewCount();
+        // Call the function when the page loads
+        window.onload = incrementVisitCount;
+
+        function confirmCertificationLink() {
+            return confirm("You are leaving the site. Are you sure you want to view my certifications?");
+        }
+
+        function confirmCloudLink() {
+            return confirm("You are leaving the site. Are you sure you want to view Cloud Resume Challenge?");
+        }
     </script>
-    <script src="scripts.js"></script>
+    
+    <script src="~/js/site.js"></script>
 </body>
 </html>
 

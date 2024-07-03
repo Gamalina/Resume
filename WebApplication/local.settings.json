@@ -1,0 +1,11 @@
+{
+  "IsEncrypted": false,
+  "Values": {
+    "AzureWebJobsStorage": "UseDevelopmentStorage=true",
+    "FUNCTIONS_WORKER_RUNTIME": "dotnet",
+    "CosmosDBEndpoint": "AccountEndpoint=https://az-cosmosdb-resume.documents.azure.com:443/;AccountKey=Cm6BfO6fX7tjxLPaV1MVbfxjAjLoTNrbUywwp7xKvaquy9MMm9pMrGdp1PEmcGQ3rss6Uhj7adWwACDbtDwzWA==;",
+    "CosmosDBKey": "Cm6BfO6fX7tjxLPaV1MVbfxjAjLoTNrbUywwp7xKvaquy9MMm9pMrGdp1PEmcGQ3rss6Uhj7adWwACDbtDwzWA==",
+    "CosmosDBDatabaseId": "viewDB",
+    "CosmosDBCollectionId": "viewContainer"
+  }
+}

@@ -1,4 +1,13 @@
-﻿// Please see documentation at https://learn.microsoft.com/aspnet/core/client-side/bundling-and-minification
-// for details on configuring this project to bundle and minify static web assets.
+﻿const obsverver = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('show');
+        }
+        else {
+            entry.target.classList.remove('show');
+        }
+    });
+});
 
-// Write your JavaScript code.
+const hiddenElements = document.querySelectorAll('.hidden');
+hiddenElements.forEach((el) => obsverver.observe(el));

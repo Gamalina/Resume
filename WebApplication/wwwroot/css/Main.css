@@ -2,14 +2,11 @@
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
-    color: #333;
 }
 
 .containerCV {
     width: 80%;
     margin: auto;
-    background-color: #fff;
     padding: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
@@ -19,8 +16,6 @@
     text-align: center;
     padding-bottom: 10px;
     margin-bottom: 20px;
-    background-color: #fff;
-    
 }
 
     .ResumeHeader h1 {
@@ -32,6 +27,7 @@
         margin: 5px 0;
         font-style: italic;
     }
+
     .ResumeHeader a {
         color: #fff;
     }
@@ -41,6 +37,7 @@
         max-width: 120px;
         height: auto;
     }
+
 .contact-info {
     margin-top: 10px;
     font-size: 0.9em;
@@ -110,3 +107,36 @@ p {
 .left-column, .right-column {
     padding: 10px;
 }
+
+.boxes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 20px;
+}
+
+.box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: calc(50% - 40px); /* Adjust based on your margin */
+    margin: 20px;
+    padding: 20px;
+    background-color: #f0f0f0; /* Light grey background */
+    border-radius: 15px; /* Rounded borders */
+    text-decoration: none; /* Remove underline from links */
+    color: black; /* Text color */
+}
+
+    .box:hover {
+        background-color: #e0e0e0; /* Slightly darker on hover */
+    }
+
+    .box h3 {
+        margin: 10px 0;
+    }
+
+    .box p {
+        text-align: center;
+    }
