@@ -6,7 +6,7 @@
     margin: 0;
 }
 
-section {
+.sectionGrid {
     display:grid;
     place-items: center;
     align-content: center;

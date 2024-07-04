@@ -12,12 +12,15 @@
 </head>
 <body>
 
-    <section class="hidden">
+    <section class="hidden sectionGrid">
+        <h1>Welcome to my take on the Cloud Resume Challenge!</h1>
+        <p>This project is NOT finalized.</p>
         <div id="visit-count" style="text-align: center;">
 
         </div>
     </section>
-    <section class="hidden">
+    <br />
+    <section class="hidden sectionGrid">
         <div class="ResumeHeader">
             <div class="header-right">
                 <img src="/images/Me.jpg" alt="Portrait" />
@@ -33,13 +36,175 @@
                 </div>
             </div>
         </div>
+<div class="main-content">
+        <div class="left-column">
+            <div class="sectionCV" id="experience">
+                <h2>Practical Experience</h2>
+                <div class="job">
+                    <h3>Project at JN Data</h3>
+                    <p>Duration: 4 months</p>
+                    <ul class="ulCV">
+                        <li>MVC web-application written in C# in .Net Framework</li>
+                        <li>Integrated Azure Database & Azure Active Directory</li>
+                        <li>Gathered data through REST API</li>
+                        <li>Designed the architecture using UML</li>
+                        <li>Tested with Unit Testing</li>
+                        <li>Documented the development</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="sectionCV" id="education">
+                <h2>Education History</h2>
+                <div class="education">
+                    <h3>Computer Science AP-Degree</h3>
+                    <p>September 2021 to February 2024 (2 years, 6 months)</p>
+                    <ul class="ulCV">
+                        <li>Solid foundation in computer science and information technology, including algorithms, data structure.</li>
+                        <li>Developing and maintaining applications</li>
+                        <li>Electives: Advanced Software Construction, IT-Security & Game Development</li>
+                    </ul>
+                </div>
+                <div class="education">
+                    <h3>Web-Integrator AP-Degree</h3>
+                    <p>September 2017 to November 2019 (2 years, 3 months)</p>
+                    <ul class="ulCV">
+                        <li>Understanding the concept of web-design</li>
+                        <li>Usage of frameworks to make designing easier</li>
+                        <li>Completed course in Umbraco</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="right-column">
+            <div class="sectionCV" id="certifications">
+                <h2>Certifications</h2>
+                <h3>Microsoft Azure Cloud AZ-900</h3>
+                <p> Duration: 13 May 2024 - 03 July 2024</p>
+                <ul class="ulCV">
+                    <li>
+                        Microsoft Azure Fundamentals
+                    </li>
+                    Provides foundational knowledge of cloud services and how those services are provided with Microsoft Azure.
+                </ul>
+            </div>
+            @* <section id="objective">
+            <h2>Objective</h2>
+            <p>To obtain a position in the field of computer science that will allow me to utilize my knowledge of software design and development.</p>
+            </section> *@
+
+            <div class="sectionCV" id="skills">
+                <h2>Relevant Skills</h2>
+                <ul class="ulCV">
+                    <li>Proficient in C#, React, Node.js, API & Azure Cloud.</li>
+                    <li>Coded several scripts with Python</li>
+                    <li>Developed several projects with the use of Agile and Scrum methodologies.</li>
+                    <li>Usage of softwares like Git, Github, Docker, Jira, Slack, Azure & many more.</li>
+                    <li>IDE: Visual Studio 2022</li>
+                </ul>
+            </div>
+
+            <div class="sectionCV" id="languages">
+                <h2>Languages</h2>
+                <ul class="ulCV">
+                    <li>Danish - Native</li>
+                    <li>English - Proficient</li>
+                </ul>
+            </div>
+        </div>
     </section>
-    <section class="hidden">
-        <h2>Graduated Computer Science</h2>
+    <section class="hidden sectionGrid">
+        <h1>What is the Cloud Resume Challenge?</h1>
+        <h3><a href="https://cloudresumechallenge.dev/docs/the-challenge/azure/">Cloud Resume Challenge</a></h3>
+        <p>The Cloud Resume Challenge is a hands-on project designed to help you bridge the gap from cloud certification to cloud job. It incorporates many of the skills that real cloud and DevOps engineers use in their daily work.</p>
+
+        <div class="content-wrapper">
+            <div class="left-side">
+                <h2>1. Certification</h2>
+                <p>Your resume needs to have the AZ-900 certification on it. This is an introductory certification that orients you on the Azure cloud.</p>
+                <h2>2. HTML - 3. CSS - 4. Static Website</h2>
+                <p>Resume needs to be written in HTML and styled with CSS. The Resume has to be deployed to Azure Storage Static Website.</p>
+                <h2>5. HTTPS</h2>
+                <p>The Azure Storage website URL should use HTTPS for security. You will need to use Azure CDN to help with this.</p>
+                <h2>6. DNS</h2>
+                <p>Point a custom DNS domain name to the Azure CDN endpoint. Use Azure DNS.</p>
+                <h2>7. Javascript</h2>
+                <p>Your resume webpage should include a visitor counter that displays how many people have accessed the site. You will need to write a bit of Javascript to make this happen. </p>
+                <h2>8. Database</h2>
+                <p>The visitor counter will need to retrieve and update its count in a database somewhere. I suggest you use the Table API of Azure’s CosmosDB for this</p>
+                <h2>9. API</h2>
+                <p>Do not communicate directly with CosmosDB from your Javascript code. Instead, you will need to create an API that accepts requests from your web app and communicates with the database. I suggest using Azure Functions with an HTTP trigger for this.</p>
+               
+            </div>
+            <div class="right-side">
+                <h2>10. Funtion App</h2>
+                <p>You will need to write a bit of code in the Azure Function; you could use more Javascript.</p>
+
+                <h2>11. Tests</h2>
+                <p>You should also include some tests for your Javascript code.</p>
+                <h2>12. Infrastructure as Code</h2>
+                <p>You should not be configuring your API resources – the Azure Function, the CosmosDB – manually, by clicking around in the Azure console. Instead, define them in an Azure Resource Manager (ARM) template on a Consumption plan. This is called “infrastructure as code” or IaC. </p>
+                <h2>13. Source Control</h2>
+                <p>You do not want to be updating either your back-end API or your front-end website by making calls from your laptop, though. You want them to update automatically whenever you make a change to the code. (This is called continuous integration and deployment, or CI/CD.) Create a GitHub repository for your backend code.</p>
+                <h2>14. CI/CD (Back end)</h2>
+                <p>Set up GitHub Actions such that when you push an update to your ARM template or Javascript code, your Javascript tests get run. If the tests pass, the ARM application should get packaged and deployed to Azure.</p>
+                <h2>15. CI/CD (Front end)</h2>
+                <p>Create a second GitHub repository for your website code. Create GitHub Actions such that when you push new website code, the Azure Storage blob automatically gets updated.</p>
+                <h2>16. Blog post</h2>
+                <p>Finally, in the text of your resume, you should link a short blog post describing some things you learned while working on this project.</p>
+
+            </div>
+            
+
+        </div>
+        </section>
+    <section class="hidden sectionGrid">
+        <h1>How did I tackle the challenge?</h1>
+        <div class="content-wrapper">
+            <div class="left-side">
+                <h2>1. Certification</h2>
+                <p><a href="https://learn.microsoft.com/api/credentials/share/en-us/DanielRudCallesen-7470/415D2E1EF09A0E57?sharingId=D7A246824E173D54">AZ-900 Certification</a></p>
+                <h2>2. HTML - 3. CSS</h2>
+                <p>Used my preferable IDE - Visual Studio 2022. Started out by creating a Project as ASP.NET Core Web App (Razor Pages), and cleared out all unnesseray files. </p>
+                <p>Took a good look on my Resume and started to find out how I should code it. As my Resume was made in Canvas, challenges arose with the design. As I am not an expert in design, I choose to simplify the resume. </p>
+                <h2>4. Static Website - 5. HTTPS - 6. DNS</h2>
+                <p>As I was taking the course in Azure Fundamentals, I was not fimallar with the use of Azure Services. Instead of using the Azure Portal, I wanted to challenge myself so I used the Azure CLI to create and deploy resources.</p>
+                <p>az account set --subscription subscription-id </p>
+                <p>az storage blob service-properties update --account-name storage-account-name --static-website --404-document error-document-name --index-document index-document-name</p>
+                <h2>6. DNS</h2>
+                <p>Point a custom DNS domain name to the Azure CDN endpoint. Use Azure DNS.</p>
+                <h2>7. Javascript</h2>
+                <p>Your resume webpage should include a visitor counter that displays how many people have accessed the site. You will need to write a bit of Javascript to make this happen. </p>
+                <h2>8. Database</h2>
+                <p>The visitor counter will need to retrieve and update its count in a database somewhere. I suggest you use the Table API of Azure’s CosmosDB for this</p>
+                <h2>9. API</h2>
+                <p>Do not communicate directly with CosmosDB from your Javascript code. Instead, you will need to create an API that accepts requests from your web app and communicates with the database. I suggest using Azure Functions with an HTTP trigger for this.</p>
+
+            </div>
+            <div class="right-side">
+                <h2>10. Funtion App</h2>
+                <p>You will need to write a bit of code in the Azure Function; you could use more Javascript.</p>
+
+                <h2>11. Tests</h2>
+                <p>You should also include some tests for your Javascript code.</p>
+                <h2>12. Infrastructure as Code</h2>
+                <p>You should not be configuring your API resources – the Azure Function, the CosmosDB – manually, by clicking around in the Azure console. Instead, define them in an Azure Resource Manager (ARM) template on a Consumption plan. This is called “infrastructure as code” or IaC. </p>
+                <h2>13. Source Control</h2>
+                <p>You do not want to be updating either your back-end API or your front-end website by making calls from your laptop, though. You want them to update automatically whenever you make a change to the code. (This is called continuous integration and deployment, or CI/CD.) Create a GitHub repository for your backend code.</p>
+                <h2>14. CI/CD (Back end)</h2>
+                <p>Set up GitHub Actions such that when you push an update to your ARM template or Javascript code, your Javascript tests get run. If the tests pass, the ARM application should get packaged and deployed to Azure.</p>
+                <h2>15. CI/CD (Front end)</h2>
+                <p>Create a second GitHub repository for your website code. Create GitHub Actions such that when you push new website code, the Azure Storage blob automatically gets updated.</p>
+                <h2>16. Blog post</h2>
+                <p>Finally, in the text of your resume, you should link a short blog post describing some things you learned while working on this project.</p>
+
+            </div>
+
+
+        </div>
     </section>
-    <section class="hidden">
-        <h1>Practical Experience</h1>
-    </section>
+</div>
 
     
 

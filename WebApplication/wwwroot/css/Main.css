@@ -1,10 +1,4 @@
-﻿body {
-    font-family: 'Roboto', sans-serif;
-    margin: 0;
-    padding: 0;
-}
-
-.containerCV {
+﻿.containerCV {
     width: 80%;
     margin: auto;
     padding: 20px;
@@ -62,14 +56,13 @@
 
 .sectionCV {
     margin-bottom: 20px;
+    max-width:400px;
 }
 
 h2 {
     font-size: 1.5em;
     margin-bottom: 10px;
-    border-bottom: 2px solid #333;
     padding-bottom: 5px;
-    color: #0066cc;
 }
 
 .ulCV {
@@ -140,3 +133,23 @@ p {
     .box p {
         text-align: center;
     }
+
+.content-wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.left-side, .right-side {
+    width: 48%;
+}
+
+/* Additional styling for alignment and responsiveness */
+@media (max-width: 768px) {
+    .content-wrapper {
+        flex-direction: column;
+    }
+
+    .left-side, .right-side {
+        width: 100%;
+    }
+}

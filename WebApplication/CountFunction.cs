@@ -12,12 +12,15 @@ using Newtonsoft.Json;
 
 public static class VisitCountFunction
 {
+    // These values are set in the local.settings.json file and are used for local development.
+    // Added local.settings.json to .gitignore to avoid committing sensitive information.
     private static readonly string EndpointUri = Environment.GetEnvironmentVariable("CosmosDBEndpoint");
     private static readonly string PrimaryKey = Environment.GetEnvironmentVariable("CosmosDBKey");
     private static readonly DocumentClient client = new DocumentClient(new Uri(EndpointUri), PrimaryKey);
     private static readonly string DatabaseId = Environment.GetEnvironmentVariable("CosmosDBDatabaseId");
     private static readonly string CollectionId = Environment.GetEnvironmentVariable("CosmosDBCollectionId");
 
+    // This function is triggered by an HTTP request and increments the visit count.
     [FunctionName("IncrementVisitCount")]
     public static async Task<IActionResult> Run(
         [HttpTrigger(AuthorizationLevel.Function, "get", Route = null)] HttpRequest req,
@@ -33,7 +36,7 @@ public static class VisitCountFunction
 
         return new OkObjectResult($"{visitCount.Count}");
     }
-
+    // This function is triggered by an HTTP request and returns the visit count.
     public class VisitCount
     {
         [JsonProperty("id")]
